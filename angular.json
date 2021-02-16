@@ -7,7 +7,7 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "sass"
+          "style": "scss"
         }
       },
       "root": "",
@@ -28,9 +28,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.sass"
+              "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/animejs/lib/anime.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -92,7 +94,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.sass"
+              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -123,6 +125,15 @@
           }
         }
       }
-    }},
-  "defaultProject": "data-visualiz"
+    }
+  },
+  "defaultProject": "data-visualiz",
+  "cli": {
+    "analytics": false
+  },
+  "schematics": {
+    "@schematics/angular:component": {
+      "style": "scss"
+    }
+  }
 }

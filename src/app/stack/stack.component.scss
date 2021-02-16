@@ -1,0 +1,27 @@
+
+.page-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.title{
+    font-size: 70px;
+}
+ul{
+    margin: 5px;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    min-width: 200px;
+}
+li{
+    font-variant-numeric: normal;
+    font-size: 40px;
+    list-style-type: none;
+    display: inline-block;
+    text-align: center;
+    height: 60px;
+    min-width: 60px;
+
+}

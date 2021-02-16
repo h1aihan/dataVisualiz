@@ -1,0 +1,12 @@
+
+<div class="page-container">
+    <div class="title"> Stack</div>
+    <ul>
+        <li>[</li>
+        <li *ngFor="let item of stack"> {{item}} </li>
+        <li>]</li>
+    </ul>
+    <input (keyup)="onKey($event)" [(ngModel)]= "numInput" name="numInput">
+    <button (click)="onClickPush()">Push()</button>
+    <button (click)="onClickPop()">Pop()</button>
+</div>
