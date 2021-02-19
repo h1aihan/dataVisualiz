@@ -24,9 +24,6 @@ export class StackComponent implements OnInit{
     if (!this.inputValue){
       return;
     }
-    if (this.stack.length == 1 && this.stack[0] == ''){
-      this.stack.pop();
-    }
     this.stack.push(this.inputValue);
     this.inputValue = "";
     this.numInput = "";
@@ -34,9 +31,6 @@ export class StackComponent implements OnInit{
 
   onClickPop(): void{
     this.stack.pop();
-    if (this.stack.length == 0){
-      this.stack.push('');
-    }
   }
 
 
