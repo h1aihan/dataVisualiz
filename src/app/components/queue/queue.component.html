@@ -1,9 +1,8 @@
-
 <app-header></app-header>
 <div class="page-container">
     <div class= "content-container">
-        <h1> Stack</h1>
-        <h2> What is A Stack?</h2>
+        <h1> Queue</h1>
+        <h2> What is a Queue?</h2>
         <p class="paragraph"> In computer science, a stack is an abstract data type that serves as a collection of elements, 
             with two main principal operations:
             Push, which adds an element to the collection, and
@@ -17,13 +16,17 @@
         This data structure makes it possible to implement a stack as a singly linked list and a pointer to the top element.
         A stack may be implemented to have a bounded capacity. If the stack is full and does not contain enough space to accept an entity to be pushed, the stack is then considered to be in an overflow state. The pop operation removes an item from the top of the stack.
         </p>
-        <ul>
-            <li>[</li>
-            <li *ngFor="let item of stack"> {{item}} </li>
-            <li>]</li>
-        </ul>
-        <input (keyup)="onKey($event)" [(ngModel)]= "numInput" name="numInput">
-        <button (click)="onClickPush()">Push()</button>
-        <button (click)="onClickPop()">Pop()</button>
+        <div class="application">
+            <ul>
+                <li><span></span></li>
+                <li *ngFor="let item of queue">
+                     {{item}} 
+                </li>
+                <li>]</li>
+            </ul>
+            <input (keyup)="onKey($event)" [(ngModel)]= "numInput" name="numInput">
+            <button mat-raised-button color="primary" (click)="onClickPush()">Push()</button>
+            <button mat-raised-button color="warn" (click)="onClickPop()">Pop()</button>
+        </div>
     </div>
 </div>

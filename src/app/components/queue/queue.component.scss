@@ -7,7 +7,7 @@
 .content-container{
     margin:0 auto;
     max-width: 75ch;
-    margin-top: 50px;
+    margin-top: 10rem;
     padding: 0 16px;
     display: flex;
     gap: 2em;
@@ -16,6 +16,8 @@
     align-items: flex-start;
 }
 h1,h2,h3{
+    margin: 0;
+    padding: 0;
     font-weight: 600;
 }
 h1,h2,h3,p {
@@ -25,10 +27,16 @@ h1,h2,h3,p {
 h1{
     font-size: 3rem;
 }
-input{
-    align-self: center;
+.application{
+    min-width: 75ch;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    border: 0px solid #ccc;
+    border-width: 1px;
+    margin-bottom: 2em;
 }
-button{
+input{
     align-self: center;
 }
 ul{
@@ -47,5 +55,30 @@ li{
     text-align: center;
     height: 60px;
     min-width: 60px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+button{
+    align-self: center;
+    margin-bottom: 2em;
+}
 
+li span::before ,
+li span::after {
+    position: relative;
+    border: solid;
+    content: '';
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 5px;
+}
+li span::before {
+    top: 15px;
+    border-color: rgb(12, 168, 12);
+    transform: rotate(135deg);
+}
+li span::after{
+    bottom: 15px;
+    border-color: red;
+    transform: rotate(-45deg);
 }

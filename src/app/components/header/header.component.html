@@ -1,0 +1,19 @@
+<div class="header-container" [style.margin-left]="headerMargin+'rem'">
+    <label for ="nav-toggle"  class="nav-toggle-label">
+        <span></span>
+    </label>
+    <h1 class= "logo">dataVisualiz</h1>
+    <input type= "checkbox" [hidden] ="true" [(ngModel)]= "navCheck" (ngModelChange)="onChange($event)" id="nav-toggle" class="nav-toggle">
+
+</div>
+<div class="nav-bar-container" 
+[style.transform]="'scale(' + navShow + ', 1)'" 
+>
+    <nav>
+        <ul [style.opacity] = "navLinks">
+            <li><a routerLink="/stack" href="#">Stack</a></li>
+            <li><a routerLink="/queue" href="#">Queue</a></li>
+            <li><a routerLink="/deque"href="#">Deque</a></li>
+        </ul>
+    </nav>
+</div>

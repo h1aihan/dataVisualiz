@@ -25,13 +25,20 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/ace-builds/src/",
+                "output": "/"
+              }
             ],
             "styles": [
               "src/styles.scss"
             ],
             "scripts": [
-              "node_modules/animejs/lib/anime.min.js"
+              "./node_modules/ace-builds/src/ace.js",
+              "./node_modules/ace-builds/src/mode-typescript.js",
+              "./node_modules/ace-builds/src/theme-dracula.js"
             ]
           },
           "configurations": {

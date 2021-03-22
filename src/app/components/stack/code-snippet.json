@@ -1,0 +1,7 @@
+{
+  "snippets": [
+    "stack : (string|number)[] = [1 , 2 , 3] ;",
+    "onClickPush(): void {\r\n    if (!this.inputValue) {\r\n      return;\r\n    }\r\n    this.stack.push(this.inputValue);\r\n    this.inputValue = '';\r\n    this.numInput = '';\r\n  }\r\n\r\n  onClickPop(): void {\r\n    this.stack.pop();\r\n  }",
+    "<ul>\r\n <li *ngFor=\"let item of stack\">\r\n       {{ item }}\r\n </li>\r\n</ul>"
+  ]
+}

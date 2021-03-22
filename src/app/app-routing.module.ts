@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { StackComponent } from '../app/stack/stack.component';
-import { AppComponent } from './app.component'
-const routes: Routes = [  
+import { StackComponent } from './components/stack/stack.component';
+import { QueueComponent } from './components/queue/queue.component';
+import { AppComponent } from './app.component';
+const routes: Routes = [
 { path: 'stack', component: StackComponent },
+{ path: 'queue', component: QueueComponent },
 { path: '', component: AppComponent},
 { path: '**', component: AppComponent }];
 
