@@ -1,32 +1,39 @@
 <app-header></app-header>
 <div class="page-container">
-    <div class= "content-container">
-        <h1> Queue</h1>
-        <h2> What is a Queue?</h2>
-        <p class="paragraph"> In computer science, a stack is an abstract data type that serves as a collection of elements, 
-            with two main principal operations:
-            Push, which adds an element to the collection, and
-            Pop, which removes the most recently added element that was not yet removed.
-            The order in which elements come off a stack gives rise to its alternative name, LIFO (last in, first out). 
-            Additionally, a peek operation may give access to the top without modifying the stack.[1] 
-        The name "stack" for this type of structure comes from the analogy to a set of physical items stacked on top of each other. 
-        This structure makes it easy to take an item off the top of the stack, while getting to an item deeper in the stack may require taking off multiple other items first.[2]
-        Considered as a linear data structure, or more abstractly a sequential collection, 
-        the push and pop operations occur only at one end of the structure, referred to as the top of the stack. 
-        This data structure makes it possible to implement a stack as a singly linked list and a pointer to the top element.
-        A stack may be implemented to have a bounded capacity. If the stack is full and does not contain enough space to accept an entity to be pushed, the stack is then considered to be in an overflow state. The pop operation removes an item from the top of the stack.
-        </p>
-        <div class="application">
-            <ul>
-                <li><span></span></li>
-                <li *ngFor="let item of queue">
-                     {{item}} 
-                </li>
-                <li>]</li>
-            </ul>
-            <input (keyup)="onKey($event)" [(ngModel)]= "numInput" name="numInput">
-            <button mat-raised-button color="primary" (click)="onClickPush()">Push()</button>
-            <button mat-raised-button color="warn" (click)="onClickPop()">Pop()</button>
-        </div>
+  <div class="content-container">
+    <h1>Queue</h1>
+    <h2>What is a Queue?</h2>
+    <p class="paragraph">
+      A queue is similar to a stack in a way that it is also a 2d list-like
+      structure. The only diffference is that queue's push and pop operation is
+      FIFO(First in First Out) so that items go out from a different side
+      comparing to a stack.
+    </p>
+    <div class="application">
+      <ul>
+        <li><span></span></li>
+        <li *ngFor="let item of queue">
+          {{ item }}
+        </li>
+        <li>]</li>
+      </ul>
+      <input (keyup)="onKey($event)" [(ngModel)]="numInput" name="numInput" />
+      <button mat-raised-button color="primary" (click)="onClickPush()">
+        Push()
+      </button>
+      <button mat-raised-button color="warn" (click)="onClickPop()">
+        Pop()
+      </button>
     </div>
+    <h2>How did I implement a queue in Javascript/Typescript?</h2>
+    <p>
+      It is tempting to just use a JavaScript Array, the same structure we used
+      to build a stack, to build a queue. We could use Array.shift() which
+      directly removes the item from the front of the array. However, this
+      operation takes O(n) Time complexity, while we want O(1) for both push and
+      pop. Therefore the Javascript built in Array is not an ideal data
+      structure to implement a queue. How can we solve this porblem? We can use
+      a singly linked list to build our custom queue. Here is how.
+    </p>
+  </div>
 </div>
